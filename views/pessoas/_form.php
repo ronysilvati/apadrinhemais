@@ -75,9 +75,8 @@ use yii\widgets\ActiveForm;
 
 <script>
 	$('#pessoas-nascimento').mask('99/99/9999', { placeholder: '__/__/____' }); 
-	$('#pessoas-celular').mask('99/99/9999', { placeholder: '(__)____ - _____' });
+	$('#pessoas-celular').mask('99 9999-9999', { placeholder: '__ ____-_____' });
 	$('#pessoas-total_pessoas_reside').mask('00', {reverse: true});
-
 </script>
 
 
