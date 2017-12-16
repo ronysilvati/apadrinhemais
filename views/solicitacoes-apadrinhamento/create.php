@@ -18,4 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
     ]) ?>
 
+	<input type="button" class="btn btn-success" onclick="location.href='/apadrinhemais/web/solicitacoes-apadrinhamento/index'" value="Home" style="float: right; background-color: #222; margin: -45px -50px 0 115px;" />
+	
 </div>

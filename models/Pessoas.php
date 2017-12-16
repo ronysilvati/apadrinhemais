@@ -65,7 +65,7 @@ class Pessoas extends \yii\db\ActiveRecord
             [['excluido', 'total_pessoas_reside'], 'integer'],
             [['nome', 'tipo_pessoa', 'profissao', 'estado_civil'], 'string', 'max' => 45],
             [['endereco'], 'string', 'max' => 100],
-            [['celular'], 'string', 'max' => 11],
+            [['celular'], 'string', 'max' => 13],
             [['email'], 'string', 'max' => 60],
             [['sexo'], 'string', 'max' => 1],
         ];
