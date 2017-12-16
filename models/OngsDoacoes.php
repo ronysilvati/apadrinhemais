@@ -19,7 +19,7 @@ use Yii;
  *
  * @property Pessoas $pessoas
  */
-class OngDoacoes extends \yii\db\ActiveRecord
+class OngsDoacoes extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -35,13 +35,12 @@ class OngDoacoes extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['valor', 'celular', 'pessoas_id'], 'required'],
+            [['valor', 'celular'], 'required'],
             [['valor'], 'number'],
             [['confirmado', 'excluido', 'pessoas_id'], 'integer'],
             [['created', 'modified'], 'safe'],
             [['celular'], 'string', 'max' => 11],
-            [['email'], 'string', 'max' => 45],
-            [['pessoas_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pessoas::className(), 'targetAttribute' => ['pessoas_id' => 'id']],
+            [['email'], 'string', 'max' => 45]
         ];
     }
 

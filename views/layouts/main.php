@@ -11,7 +11,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\controllers\AppController;
 
-
+use yii\web\View;
 
 ?>
 <?php $this->beginPage() ?>
@@ -24,6 +24,12 @@ use app\controllers\AppController;
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+
+    <?php
+        $this->registerJsFile('@web/js/jquery-3.2.1.min.js',['position'=> View::POS_HEAD]);
+        $this->registerJsFile('@web/js/jquery.mask.min.js',['position'=> View::POS_HEAD]);
+    ?>
+
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -69,6 +75,7 @@ use app\controllers\AppController;
                 ['label' => 'Quero ser padrinho', 'url' => ['/pessoas/create-padrinho']],
                 ['label' => 'Cadastrar ONG', 'url' => ['/pessoas/create-gestor']],
                 ['label' => 'ONG\'S', 'url' => ['/ongs/lista']],
+                ['label' => 'Doação', 'url' => ['/ongs-doacoes/create']],
                 Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
                 ) : (
@@ -106,6 +113,7 @@ use app\controllers\AppController;
 </footer>
 
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

@@ -25,7 +25,7 @@ use Yii;
  * @property Apadrinhamentos[] $apadrinhamentos
  * @property Apadrinhamentos[] $apadrinhamentos0
  * @property ApadrinhamentosDisponiveis[] $apadrinhamentosDisponiveis
- * @property OngDoacoes[] $ongDoacoes
+ * @property OngsDoacoes[] $ongDoacoes
  * @property SolicitacoesApadrinhamento[] $solicitacoesApadrinhamentos
  * @property Usuarios[] $usuarios
  */
@@ -123,7 +123,7 @@ class Pessoas extends \yii\db\ActiveRecord
      */
     public function getOngDoacoes()
     {
-        return $this->hasMany(OngDoacoes::className(), ['pessoas_id' => 'id']);
+        return $this->hasMany(OngsDoacoes::className(), ['pessoas_id' => 'id']);
     }
 
     /**

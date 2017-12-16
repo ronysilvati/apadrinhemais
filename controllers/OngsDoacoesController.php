@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\OngDoacoes;
+use app\models\OngsDoacoes;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * OngsDoacoesController implements the CRUD actions for OngDoacoes model.
+ * OngsDoacoesController implements the CRUD actions for OngsDoacoes model.
  */
-class OngsDoacoesController extends Controller
+class OngsDoacoesController extends AppController
 {
     /**
      * @inheritdoc
@@ -30,13 +30,13 @@ class OngsDoacoesController extends Controller
     }
 
     /**
-     * Lists all OngDoacoes models.
+     * Lists all OngsDoacoes models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => OngDoacoes::find(),
+            'query' => OngsDoacoes::find(),
         ]);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class OngsDoacoesController extends Controller
     }
 
     /**
-     * Displays a single OngDoacoes model.
+     * Displays a single OngsDoacoes model.
      * @param integer $id
      * @return mixed
      */
@@ -57,16 +57,25 @@ class OngsDoacoesController extends Controller
     }
 
     /**
-     * Creates a new OngDoacoes model.
+     * Creates a new OngsDoacoes model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new OngDoacoes();
+        $model = new OngsDoacoes();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if(Yii::$app->request->isPost){
+            $model->pessoas_id = $this->getPessoaId();
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->save(false)) {
+
+            $model = new OngsDoacoes();
+
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -75,7 +84,7 @@ class OngsDoacoesController extends Controller
     }
 
     /**
-     * Updates an existing OngDoacoes model.
+     * Updates an existing OngsDoacoes model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +103,7 @@ class OngsDoacoesController extends Controller
     }
 
     /**
-     * Deletes an existing OngDoacoes model.
+     * Deletes an existing OngsDoacoes model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +116,15 @@ class OngsDoacoesController extends Controller
     }
 
     /**
-     * Finds the OngDoacoes model based on its primary key value.
+     * Finds the OngsDoacoes model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return OngDoacoes the loaded model
+     * @return OngsDoacoes the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = OngDoacoes::findOne($id)) !== null) {
+        if (($model = OngsDoacoes::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

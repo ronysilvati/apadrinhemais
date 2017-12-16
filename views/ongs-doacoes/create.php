@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\OngsDoacoes */
+/* @var $model app\models\Ongs */
 
-$this->title = 'Create Ongs Doacoes';
-$this->params['breadcrumbs'][] = ['label' => 'Ongs Doacoes', 'url' => ['index']];
+$this->title = 'Efetuar doações';
+$this->params['breadcrumbs'][] = ['label' => 'Home', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="ongs-doacoes-create">
+<div class="ongs-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
