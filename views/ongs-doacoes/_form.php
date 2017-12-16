@@ -32,7 +32,7 @@ use yii\widgets\ActiveForm;
 <script>
 
 
-    $('#ongsdoacoes-valor').mask('000.000.000.000.000,00', {reverse: true});
+    $('#ongsdoacoes-valor').mask('000000.00', {reverse: true});
 
 
 
