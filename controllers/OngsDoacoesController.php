@@ -66,8 +66,8 @@ class OngsDoacoesController extends AppController
         $model = new OngsDoacoes();
 
         if ($model->load(Yii::$app->request->post())) {
+
             $model->pessoas_id = $this->getPessoaId();
-            $model->valor = number_format($model->valor,2,'.','');
             $model->celular = $this->convertCel($model->celular);
 
             if($model->save(false)){
