@@ -31,9 +31,7 @@ use yii\widgets\ActiveForm;
 
 <script>
 
-
-    $('#ongsdoacoes-valor').mask('000000.00', {reverse: true});
-
-
+    $('#ongsdoacoes-valor').mask("#.##0,00", {reverse: true});
+    $('#ongsdoacoes-celular').mask('(00) 00000-0000');
 
 </script>

@@ -109,7 +109,9 @@ class PessoasController extends AppController
 
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            $this->connectPeople($model);
+
+            return $this->redirect(['/usuarios/create']);
         } else {
             return $this->render('create', [
                 'model' => $model,

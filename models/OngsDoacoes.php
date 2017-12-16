@@ -36,10 +36,9 @@ class OngsDoacoes extends \yii\db\ActiveRecord
     {
         return [
             [['valor', 'celular'], 'required'],
-            [['valor'], 'number'],
             [['confirmado', 'excluido', 'pessoas_id'], 'integer'],
             [['created', 'modified'], 'safe'],
-            [['celular'], 'string', 'max' => 11],
+            [['celular'], 'string', 'max' => 19],
             [['email'], 'string', 'max' => 45]
         ];
     }

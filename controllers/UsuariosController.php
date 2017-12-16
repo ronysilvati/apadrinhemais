@@ -75,7 +75,14 @@ class UsuariosController extends AppController
         $model->load(Yii::$app->request->post());
 
         if ($model->load(Yii::$app->request->post()) && $model->save(false)) {
-            return $this->redirect(['/solicitacoes-apadrinhamento/create']);
+
+            if($this->getPessoaTipo() === 'PADRINHO'){
+                return $this->redirect(['/solicitacoes-apadrinhamento/create']);
+            }
+            else if($this->getPessoaTipo() === 'GESTOR'){
+                return $this->redirect(['/ongs/create']);
+            }
+
         } else {
 
             return $this->render('create', [

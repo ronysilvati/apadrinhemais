@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
     </div>
 
     <?php
-        $model->tipo_pessoa = $tipo;
+    $model->tipo_pessoa = $tipo;
     ?>
 
     <div class="col col-md-7 col-lg-7">
@@ -45,21 +45,21 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
     </div>
     <div class="col col-md-3 col-lg-3">
-    <?=
+        <?=
         $form->field($model, 'sexo')
             ->dropDownList(
                 array('M'=>'MASCULINO','F'=>'FEMININO')
             );
-    ?>
+        ?>
     </div>
     <?php
-        if($tipo === 'PADRINHO'){
-            ?>
-            <div class="col col-md-2 col-lg-2">
-                <?= $form->field($model, 'total_pessoas_reside')->textInput() ?>
-            </div>
-            <?php
-        }
+    if($tipo === 'PADRINHO'){
+        ?>
+        <div class="col col-md-2 col-lg-2">
+            <?= $form->field($model, 'total_pessoas_reside')->textInput() ?>
+        </div>
+        <?php
+    }
 
     ?>
 
@@ -71,3 +71,13 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
+<script>
+    $('#pessoas-nascimento').mask('99/99/9999', { placeholder: '__/__/____' });
+    $('#pessoas-celular').mask('99/99/9999', { placeholder: '(__)____ - _____' });
+    $('#pessoas-total_pessoas_reside').mask('00', {reverse: true});
+</script>
+
+
+
