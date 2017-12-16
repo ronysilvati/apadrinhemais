@@ -20,16 +20,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'requisitos_apadrinhamento')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'excluido')->textInput() ?>
-
-    <?= $form->field($model, 'created')->textInput() ?>
-
-    <?= $form->field($model, 'modified')->textInput() ?>
-
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Cadastrar' : 'Atualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script>
+    $('#ongs-cnpj').mask('00.000.000/0000-00', {reverse: true});
+</script>

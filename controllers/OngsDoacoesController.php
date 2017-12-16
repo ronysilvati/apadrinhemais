@@ -65,17 +65,23 @@ class OngsDoacoesController extends AppController
     {
         $model = new OngsDoacoes();
 
-        if(Yii::$app->request->isPost){
+        if ($model->load(Yii::$app->request->post())) {
             $model->pessoas_id = $this->getPessoaId();
-        }
+            $model->valor = number_format($model->valor,2,'.','');
+            $model->celular = $this->convertCel($model->celular);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save(false)) {
+            if($model->save(false)){
+                $model = new OngsDoacoes();
 
-            $model = new OngsDoacoes();
-
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+                return $this->render('create', [
+                    'model' => $model,
+                ]);
+            }
+            else{
+                return $this->render('create', [
+                    'model' => $model,
+                ]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,

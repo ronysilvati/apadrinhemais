@@ -44,4 +44,15 @@ class AppController extends Controller{
 
         }
     }
+
+    protected function convertCel($cel){
+        if(!empty($cel)){
+            $cel = str_replace(' ','',$cel);
+            $cel = str_replace('(','',$cel);
+            $cel = str_replace(')','',$cel);
+            $cel = str_replace('-','',$cel);
+        }
+
+        return null;
+    }
 }

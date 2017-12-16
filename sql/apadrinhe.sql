@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16-Dez-2017 às 12:55
+-- Generation Time: 16-Dez-2017 às 19:41
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -125,8 +125,51 @@ CREATE TABLE `ong_doacoes` (
   `excluido` tinyint(4) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `pessoas_id` int(11) NOT NULL
+  `pessoas_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `ong_doacoes`
+--
+
+INSERT INTO `ong_doacoes` (`id`, `valor`, `celular`, `email`, `confirmado`, `excluido`, `created`, `modified`, `pessoas_id`) VALUES
+(1, 10, '82988075002', 'ronysilvati@Live.com', 0, 0, '2017-12-16 15:40:08', '2017-12-16 15:40:08', NULL),
+(2, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:41:02', '2017-12-16 15:41:02', NULL),
+(3, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:41:27', '2017-12-16 15:41:27', NULL),
+(4, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:46:55', '2017-12-16 15:46:55', NULL),
+(5, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:48:15', '2017-12-16 15:48:15', NULL),
+(6, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:48:17', '2017-12-16 15:48:17', NULL),
+(7, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:49:34', '2017-12-16 15:49:34', NULL),
+(8, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:50:44', '2017-12-16 15:50:44', NULL),
+(9, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:51:16', '2017-12-16 15:51:16', NULL),
+(10, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:54:05', '2017-12-16 15:54:05', NULL),
+(11, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:54:27', '2017-12-16 15:54:27', NULL),
+(12, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:54:53', '2017-12-16 15:54:53', NULL),
+(13, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:55:04', '2017-12-16 15:55:04', NULL),
+(14, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:57:46', '2017-12-16 15:57:46', NULL),
+(15, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:58:52', '2017-12-16 15:58:52', NULL),
+(16, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:59:06', '2017-12-16 15:59:06', NULL),
+(17, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:59:37', '2017-12-16 15:59:37', NULL),
+(18, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 15:59:38', '2017-12-16 15:59:38', NULL),
+(19, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:00:03', '2017-12-16 16:00:03', NULL),
+(20, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:01:41', '2017-12-16 16:01:41', NULL),
+(21, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:03:58', '2017-12-16 16:03:58', NULL),
+(22, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:05:35', '2017-12-16 16:05:35', NULL),
+(23, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:05:45', '2017-12-16 16:05:45', NULL),
+(24, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:06:27', '2017-12-16 16:06:27', NULL),
+(25, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:06:29', '2017-12-16 16:06:29', NULL),
+(26, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:07:52', '2017-12-16 16:07:52', NULL),
+(27, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:08:12', '2017-12-16 16:08:12', NULL),
+(28, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:08:45', '2017-12-16 16:08:45', NULL),
+(29, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:09:04', '2017-12-16 16:09:04', NULL),
+(30, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:09:51', '2017-12-16 16:09:51', NULL),
+(31, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:09:51', '2017-12-16 16:09:51', NULL),
+(32, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:10:09', '2017-12-16 16:10:09', NULL),
+(33, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:14:12', '2017-12-16 16:14:12', NULL),
+(34, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:14:26', '2017-12-16 16:14:26', NULL),
+(35, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:14:58', '2017-12-16 16:14:58', NULL),
+(36, 100, '82988075002', 'asdkasd@h.com', 0, 0, '2017-12-16 16:15:12', '2017-12-16 16:15:12', NULL),
+(37, 47.48, '82988075002', 'ronysilvati@live.com', 0, 0, '2017-12-16 16:15:24', '2017-12-16 16:15:24', NULL);
 
 -- --------------------------------------------------------
 
@@ -167,7 +210,8 @@ INSERT INTO `pessoas` (`id`, `nome`, `nascimento`, `tipo_pessoa`, `excluido`, `c
 (13, 'asasdas', '1990-06-05', 'PADRINHO', 0, '2017-12-15 00:15:01', '2017-12-15 00:15:01', 'programador', 'SOLTEIRO', 0, 'Rua barão de alagoas', '82988075002', 'ronysilvati@live.com', 'M'),
 (14, 'asdasda', '1990-06-05', 'PADRINHO', 0, '2017-12-15 00:16:46', '2017-12-15 00:16:46', 'programador', 'SOLTEIRO', 0, '23434', '82988075002', 'ronysilvati@live.com', 'M'),
 (15, '234234234', '1990-06-05', 'PADRINHO', 0, '2017-12-15 00:20:02', '2017-12-15 00:20:02', 'programador', 'SOLTEIRO', 0, 'Rua barão de alagoas', '82988075002', 'ronysilvati@live.com', 'M'),
-(16, '234234234', '1990-06-05', 'PADRINHO', 0, '2017-12-15 00:20:35', '2017-12-15 00:20:35', 'programador', 'SOLTEIRO', 0, 'Rua barão de alagoas', '82988075002', 'ronysilvati@live.com', 'M');
+(16, '234234234', '1990-06-05', 'PADRINHO', 0, '2017-12-15 00:20:35', '2017-12-15 00:20:35', 'programador', 'SOLTEIRO', 0, 'Rua barão de alagoas', '82988075002', 'ronysilvati@live.com', 'M'),
+(17, 'Sou um novo usuário', '0000-00-00', 'GESTOR', 0, '2017-12-16 16:26:39', '2017-12-16 16:26:39', 'Programador', 'SOLTEIRO', 0, 'Rua barão de alagoas', '82988075002', 'ronysilvati@live.com', 'M');
 
 -- --------------------------------------------------------
 
@@ -224,7 +268,8 @@ INSERT INTO `usuarios` (`id`, `login`, `senha`, `excluido`, `created`, `modified
 (6, '3333', '333333', 0, '2017-12-14 23:19:32', '2017-12-14 23:19:32', 12, NULL),
 (7, '234234', '23434234', 0, '2017-12-15 00:15:08', '2017-12-15 00:15:08', 13, NULL),
 (8, '234234', '23423434', 0, '2017-12-15 00:16:57', '2017-12-15 00:16:57', 14, NULL),
-(9, '234234234', '23423434', 0, '2017-12-15 00:20:45', '2017-12-15 00:20:45', 16, NULL);
+(9, '234234234', '23423434', 0, '2017-12-15 00:20:45', '2017-12-15 00:20:45', 16, NULL),
+(10, 'laldalsdla', 'kaskdkaskdasd', 0, '2017-12-16 16:26:51', '2017-12-16 16:26:51', 17, NULL);
 
 --
 -- Indexes for dumped tables
@@ -332,13 +377,13 @@ ALTER TABLE `ongs_horarios_visitas`
 -- AUTO_INCREMENT for table `ong_doacoes`
 --
 ALTER TABLE `ong_doacoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `solicitacoes_apadrinhamento`
@@ -350,7 +395,7 @@ ALTER TABLE `solicitacoes_apadrinhamento`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
