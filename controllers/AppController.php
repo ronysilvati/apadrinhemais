@@ -51,6 +51,8 @@ class AppController extends Controller{
             $cel = str_replace('(','',$cel);
             $cel = str_replace(')','',$cel);
             $cel = str_replace('-','',$cel);
+
+            return $cel;
         }
 
         return null;
